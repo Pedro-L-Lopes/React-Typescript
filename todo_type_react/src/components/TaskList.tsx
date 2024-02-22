@@ -18,11 +18,7 @@ const TaskList = ({ taskList, handleDelete, handleEdit }: Props) => {
           <div key={index} className={styles.task}>
             <div className={styles.details}>
               <h4>{task.title}</h4>
-              <div
-                className={`${styles.difficultyBar} ${
-                  styles[`d${task.difficulty}`]
-                }`}
-              ></div>
+              <p>Dificuldade: {task.difficulty}</p>
             </div>
             <div className={styles.actions}>
               <i onClick={() => handleEdit(task)}>
